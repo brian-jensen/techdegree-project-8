@@ -1,0 +1,161 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 300;
+  color: #111;
+  background: #edeff0;
+  background-image: url(svgs/background.svg);
+}
+
+#container {
+  max-width: 960px;
+  background: #fff;
+  margin: 0 auto;
+  padding: 25px 25px 0;
+  height: 100%;
+}
+
+p {
+  max-width: 350px;
+  margin: 25px auto 0;
+  line-height: 2em;
+  text-align: left;
+  font-size: 14px;
+}
+
+a {
+  text-decoration: none;
+  color: #39add1;
+  font-weight: 700;
+}
+
+a:hover {
+  color: #111;
+}
+
+header {
+  padding-top: 15px;
+  margin: 10px auto 40px;
+}
+
+header nav {
+  padding-bottom: 50px;
+  text-align: left;
+}
+
+header nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+section h1 {
+  font-size: 24px;
+  margin-top: 30px;
+}
+
+main h2 {
+  font-size: 22px;
+  margin-top: 35px;
+}
+
+footer {
+  width: 100%;
+  margin-top: 50px;
+  padding-bottom: 30px;
+  color: #ba8058;
+}
+
+ul {
+  list-style: none;
+}
+
+.nav li {
+  display: inline;
+}
+
+.nav li:last-child, .coat-colors .corgi-stone {
+  margin-right: 0;
+}
+
+.nav li {
+  margin-right: 6px;
+}
+
+.nav a {
+  font-size: 14px;
+}
+
+.nav-heart,
+.nav-location,
+.nav-contact {
+  fill: #39add1;
+}
+
+.corgi-template {
+  display: none;
+}
+
+.logo-background {
+  fill: #BA8058;
+}
+
+.logo-text {
+  fill: #eaaa7f;
+  display: none;
+}
+
+.logo-heading {
+  text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: #eaaa7f;
+}
+
+.logo-left-pad,
+.logo-center-pad,
+.logo-right-pad,
+.logo-bottom-pad {
+  fill: #F4C6A6;
+}
+
+.coat-colors {
+  margin: 25px auto;
+  padding: 0 25px 15px;
+}
+
+.coat-colors svg {
+  transform: rotate(-11deg) scale(1.2);
+  margin: 0 auto 10px;
+  padding-left: 25px;
+}
+
+.coat-colors span {
+  display: block;
+  color: #b97f5b;
+  text-align: center;
+  margin: 20px auto 15px;
+}
+
+.corgi-sable {
+  color: #b97f5b;
+}
+
+.corgi-fawn {
+  color: #e9aa82;
+}
+
+.corgi-red {
+  color: #834b29;
+}
+
+.corgi-stone {
+  color: #52595e;
+}

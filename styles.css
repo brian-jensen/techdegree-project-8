@@ -79,14 +79,11 @@ ul {
 
 .nav li {
   display: inline;
+  margin-right: 6px;
 }
 
 .nav li:last-child, .coat-colors .corgi-stone {
   margin-right: 0;
-}
-
-.nav li {
-  margin-right: 6px;
 }
 
 .nav a {
@@ -159,3 +156,78 @@ ul {
 .corgi-stone {
   color: #52595e;
 }
+
+@media (min-width: 425px) {
+  .nav {
+    text-align: left;
+  }
+  .nav li {
+    margin-right: 30px;
+  }
+  .nav a {
+    font-size: 16px;
+    margin-left: 5px;
+  }
+  .home svg {
+    width: 15px;
+    height: 13px;
+  }
+  .visit-us svg {
+    width: 14px;
+    height: 14px;
+  }
+  .contact-us svg {
+    width: 15px;
+    height: 15px;
+    margin-bottom: -1px;
+  }
+  header {
+    margin-top: 85px;
+  }
+  .logo-text {
+    display: block;
+  }
+  .logo-heading {
+    display: none;
+  }
+  .logo {
+    transform: scale(1.2);
+  }
+  section h1 {
+    font-size: 32px;
+    margin: auto;
+  }
+  p {
+    margin: 35px auto;
+    padding-left: 5px;
+    font-size: 16px;
+  }
+  main {
+    margin: 75px auto;
+  }
+  main h2 {
+    font-size: 28px;
+  }
+  .coat-colors svg {
+    transform: rotate(-11deg) scale(1.5);
+  }
+}
+
+@media (min-width: 1024px) {
+  .coat-colors {
+    margin: 15px auto;
+  }
+  .corgi li {
+    display: inline-block;
+    margin-right: 30px;
+  }
+  .coat-colors svg {
+    transform: rotate(0) scale(1.2);
+    margin: 0 auto;
+    padding-left: 30px;
+  }
+  .coat-colors span {
+    margin: 0 auto;
+  }
+}
+

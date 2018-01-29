@@ -82,7 +82,8 @@ ul {
   margin-right: 6px;
 }
 
-.nav li:last-child, .coat-colors .corgi-stone {
+.nav li:last-child,
+.coat-colors .corgi-stone {
   margin-right: 0;
 }
 
@@ -93,6 +94,7 @@ ul {
 .nav-heart,
 .nav-location,
 .nav-contact {
+  transform: rotate(0deg) scale(1) rotateY(0deg);
   fill: #39add1;
 }
 
@@ -120,6 +122,7 @@ ul {
 .logo-center-pad,
 .logo-right-pad,
 .logo-bottom-pad {
+  transform: translate3d(0,0,0) scale(1);
   fill: #F4C6A6;
 }
 
@@ -130,7 +133,7 @@ ul {
 
 .coat-colors svg {
   transform: rotate(-11deg) scale(1.2);
-  margin: 0 auto 10px;
+  margin: 0 auto;
   padding-left: 25px;
 }
 
@@ -138,7 +141,7 @@ ul {
   display: block;
   color: #b97f5b;
   text-align: center;
-  margin: 20px auto 15px;
+  margin: 0 auto;
 }
 
 .corgi-sable {
@@ -156,6 +159,215 @@ ul {
 .corgi-stone {
   color: #52595e;
 }
+
+/* ANIMATIONS */
+
+@keyframes heart-beat {
+  0% {
+    transform: scale(0.9);
+  }
+  10% {
+    transform: scale(0.8);
+  }
+  20% {
+    transform: scale(0.7);
+  }
+  30% {
+    transform: scale(0.6);
+  }
+  40% {
+    transform: scale(0.5);
+  }
+  50% {
+    transform: scale(0.6);
+  }
+  60% {
+    transform: scale(0.7);
+  }
+  70% {
+    transform: scale(0.8);
+  }
+  80% {
+    transform: scale(0.9);
+  }
+  90% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+.home:hover .nav-heart {
+  transform-origin: center center;
+  animation: heart-beat 1s ease-out backwards infinite;
+  animation-delay: .1s;
+  fill: #e9aa82;
+}
+.home:hover a {
+  color: #e9aa82;
+}
+
+@keyframes tack-wiggle {
+  0% {
+    transform: rotate(-10deg);
+  }
+  10% {
+    transform: rotate(-20deg);
+  }
+  20% {
+    transform: rotate(-30deg);
+  }
+  30% {
+    transform: rotate(-20deg);
+  }
+  40% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  60% {
+    transform: rotate(10deg);
+  }
+  70% {
+    transform: rotate(20deg);
+  }
+  80% {
+    transform: rotate(30deg);
+  }
+  90% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(10deg);
+  }
+}
+
+.visit-us:hover .nav-location {
+  transform-origin: center center;
+  animation: tack-wiggle 300ms ease-out backwards infinite;
+  animation-delay: 30ms;
+  fill: #834b29;
+}
+.visit-us:hover a {
+  color: #834b29;
+}
+
+@keyframes chat-bubble-rotate {
+  0% {
+    transform: rotateY(0deg);
+  }
+  10% {
+    transform: rotateY(36deg);
+  }
+  20% {
+    transform: rotateY(72deg);
+  }
+  30% {
+    transform: rotateY(108deg);
+  }
+  40% {
+    transform: rotateY(144deg);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+  60% {
+    transform: rotateY(144deg);
+  }
+  70% {
+    transform: rotateY(108deg);
+  }
+  80% {
+    transform: rotateY(72deg);
+  }
+  90% {
+    transform: rotateY(36deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+.contact-us:hover .nav-contact {
+  transform-origin: center center;
+  animation: chat-bubble-rotate 1.2s ease-in-out backwards infinite;
+  fill: #52595e;
+}
+.contact-us:hover a {
+  color: #52595e;
+}
+
+@keyframes slide {
+	50% {
+		transform: translate3d(0,-10px,0);
+	}
+	80% {
+		transform: translate3d(0,10px,0);
+	}
+	100% {
+		transform: translate3d(0,0,0);
+	}
+} 
+
+@keyframes grow {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.15);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+.logo:hover {
+  cursor: pointer;
+}
+
+.pad-group * {
+  transform-origin: center center;
+}
+
+.logo:hover .logo-left-pad {
+	animation: slide .5s forwards, 
+             grow .6s ease-out forwards;
+}
+
+.logo:hover .logo-center-pad {
+	animation: slide .5s forwards, 
+		         grow .6s ease-out forwards;
+}
+
+.logo:hover .logo-right-pad {
+	animation: slide .5s forwards, 
+		         grow .6s ease-out forwards;
+}
+
+.logo:hover .logo-bottom-pad {
+	animation: slide .5s forwards, 
+		         grow .6s ease-out forwards;
+}
+
+.logo:hover .logo-left-pad {
+  animation-delay: .3s;  
+}
+
+.logo:hover .logo-center-pad {
+  animation-delay: .5s;  
+}
+
+.logo:hover .logo-right-pad {
+  animation-delay: .7s;  
+}
+
+.logo:hover .logo-bottom-pad {
+  animation-delay: .9s;  
+}
+
+/* MEDIA QUERIES */
 
 @media (min-width: 425px) {
   .nav {
@@ -210,6 +422,7 @@ ul {
   }
   .coat-colors svg {
     transform: rotate(-11deg) scale(1.5);
+    margin: 0 auto 25px;
   }
 }
 
@@ -230,4 +443,3 @@ ul {
     margin: 0 auto;
   }
 }
-
